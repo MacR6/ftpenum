@@ -6,7 +6,7 @@ import sys
 
 '''
 Name: ftp_tool.py
-Author: Jason Hill
+Author: MacR6
 Description:  This tool will take a single IP or a file containg a list of IPs and try to 
 connect to each one and grab the banner.  It will then try to log into the FTP server Anonymously.
 If it can log in it will attempt to list the root directory.  This was built to rummage through a list of 
