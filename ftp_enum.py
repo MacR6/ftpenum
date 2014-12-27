@@ -50,14 +50,14 @@ def getinfo(host,output_file_exists,oFile):
     connect_output = ftpconnect(host)
     if output_file_exists:
         if connect_output == 'socketError':
-            oFile.write("*" * 64 + "\n[+] " + host)
-            oFile.write("[-] Socket Error\n" + "*" * 64)
+            oFile.write("\n" + "*" * 64 + "\n[+] " + host)
+            oFile.write("\n[-] Socket Error\n" + "*" * 64 + "\n")
         elif connect_output == 'socketTimeout':
-            oFile.write("*" * 64 + "\n[+] " + host)
-            oFile.write("[-] Socket Timedout\n" + "*" * 64) 
+            oFile.write("\n" + "*" * 64 + "\n[+] " + host)
+            oFile.write("\n[-] Socket Timedout\n" + "*" * 64 + "\n") 
         elif connect_output == 'wtf':
-            oFile.write("*" * 64 + "\n[+] " + host)
-            oFile.write("[-] Error Connecting\n" + "*" * 64)
+            oFile.write("\n" + "*" * 64 + "\n[+] " + host)
+            oFile.write("\n[-] Error Connecting\n" + "*" * 64 + "\n")
         else:
             oFile.write("*" * 64)
             oFile.write("\n[+] " + host)
@@ -177,5 +177,4 @@ except KeyboardInterrupt:
     if f:
         f.close()
     sys.exit()
-
 
