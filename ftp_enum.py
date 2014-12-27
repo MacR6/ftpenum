@@ -1,8 +1,5 @@
+#!/usr/bin/env python
 
-import socket
-from ftplib import FTP
-import argparse
-import sys
 
 '''
 Name: ftp_tool.py
@@ -12,6 +9,11 @@ connect to each one and grab the banner.  It will then try to log into the FTP s
 If it can log in it will attempt to list the root directory.  This was built to rummage through a list of 
 FTP servers during a pentest. Added progress percentage.
 '''
+
+import socket
+from ftplib import FTP
+import argparse
+import sys
 
 
 def ftplist(host):
